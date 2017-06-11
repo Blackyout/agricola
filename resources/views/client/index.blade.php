@@ -16,7 +16,7 @@
     	<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search ">
       		<div class="input-group">
 	      		{!!Form::open(['route'=>'client.index','method'=>'GET','class'=>'navbar-form navbar-left', 'role'=>'search'])!!}
-	      			{!! Form::text ('name', null , ['class'=>'form-control', 'placeholder'=>'Nombre de cliente']) !!}
+	      			{!! Form::text ('buscar', null , ['class'=>'form-control', 'placeholder'=>'Nombre de cliente']) !!}
 	        		<span class="input-group-btn">
 	          			<button class="btn btn-default" type="submit">Buscar</button>
 	        		</span>
