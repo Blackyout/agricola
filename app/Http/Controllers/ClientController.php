@@ -19,7 +19,7 @@ class ClientController extends Controller {
 	
 	public function index()
 	{
-		$clients = \agricolacentral\Client::All();
+		$clients = \agricolacentral\Client::paginate(6);
 		return view('client.index', compact('clients'));
 	}
 
@@ -105,7 +105,14 @@ class ClientController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$accounts = \agricolacentral\Account::where('client_id', $id)->count();
+		if ($accounts>0) {
+			return view ('client.erroreliminated');
+		} else {
+			\agricolacentral\Client::destroy($id);
+			return redirect ('/client');
+		}
+		
 	}
 
 
