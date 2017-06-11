@@ -22,4 +22,16 @@ class Client extends Model {
         return $this->hasMany('\agricolacentral\Account');
     }
 
+
+		public function scopeName($query,$name)
+		{
+		  if (trim($name) !="")
+		  {
+		    $query->where(\DB::raw("CONCAT(Name,' ',last_name,' ',identification)"),"LIKE","%$name%");
+		  }
+
+		}
+
+
+
 }
