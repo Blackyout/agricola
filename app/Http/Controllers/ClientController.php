@@ -20,7 +20,7 @@ class ClientController extends Controller {
 	public function index(Request $request)
 	{
 
-		$clients = \agricolacentral\Client::name($request->get('name'))->orderBy('id','DESC')->paginate(6);
+		$clients = \agricolacentral\Client::buscar($request->get('buscar'))->orderBy('id','DESC')->paginate(6);
 		return view('client.index', compact('clients'));
 	}
 
