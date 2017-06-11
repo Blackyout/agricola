@@ -23,7 +23,7 @@ class Client extends Model {
     }
 
 
-		public function scopeName($query,$name)
+		public function scopeBuscar($query,$name)
 		{
 		  if (trim($name) !="")
 		  {
