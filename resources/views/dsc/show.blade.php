@@ -18,7 +18,7 @@
     </head>
 <body>
 <img src="img/targeta1.png" width="190" height="50">
-<h5>ibague:&nbsp;&nbsp;{{$dsc->fecha}}</h5>
+<h5>Ibagué &nbsp;&nbsp;{{$dsc->fecha}}</h5>
 <h3 align="center">DECLARACION SOPORTE DE CUENTA<br/><br />DOCUMENTO EQUIVALENTE No. {{ $dsc->id }} <br/>Pago No. 1</h3>
     <p><b>Contrato No.&nbsp;</b><u>{{ $dsc->Num_Cont }}</u><br><b>ACTIVIDAD:&nbsp;&nbsp;</b><u>{{ $dsc->Actividad }}</u><br><b>VALOR CONTRATO:&nbsp;</b><u>${{ number_format($dsc->val_contra)}}.oo</u></p> 
     <h4>EJECUCION DEL CONTRATO</h4>
