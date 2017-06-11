@@ -16,10 +16,11 @@ class ClientController extends Controller {
 	{
 		$this->middleware('auth');
 	}
-	
-	public function index()
+
+	public function index(Request $request)
 	{
-		$clients = \agricolacentral\Client::paginate(6);
+
+		$clients = \agricolacentral\Client::name($request->get('name'))->orderBy('id','DESC')->paginate(6);
 		return view('client.index', compact('clients'));
 	}
 
@@ -112,7 +113,7 @@ class ClientController extends Controller {
 			\agricolacentral\Client::destroy($id);
 			return redirect ('/client');
 		}
-		
+
 	}
 
 
