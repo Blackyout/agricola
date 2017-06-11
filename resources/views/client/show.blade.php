@@ -1,5 +1,14 @@
 @extends('admin.principal')
 
+<?php $message=Session::get('message') ?>
+
+@if($message == 'store')
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      No es posible eliminar a este usuario, tiene cuentas de cobro asociadas, si esta seguro de eliminarlo debe eliminar primero sus cuentas de cobro.
+    </div>
+@endif
+
 @section('content')
     <div class="container">
     	<div class="row">
@@ -24,7 +33,6 @@
                     <th>#</th>
                     <th>FECHA</th>
                     <th>Valor</th>
-                    <th>ESTADO</th>
                     <th>Opciones</th>
                 </thead>
                     @foreach($accounts as $account)
@@ -32,11 +40,9 @@
         <td>{{ $account->id }}</td>
         <td>{{ $account->date }}</td>
         <td>{{ $account->price }}</td>
-        <td></td>
         <td>
-            {!!link_to_route('account.show', $title = 'Ver', $parameters = $account->id, $attributes = ['class'=>'btn btn-success'])!!}
+            {!!link_to_route('account.show', $title = 'PDF', $parameters = $account->id, $attributes = ['class'=>'btn btn-success'])!!}
             {!!link_to_route('account.edit', $title = 'Editar', $parameters = $account->id, $attributes = ['class'=>'btn btn-primary'])!!}
-            {!!link_to_route('account.edit', $title = 'Eliminar', $parameters = $account->id, $attributes = ['class'=>'btn btn-danger'])!!}
             
 
         </td>
