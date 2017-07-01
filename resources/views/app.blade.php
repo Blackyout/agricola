@@ -64,7 +64,7 @@
 					<br>
 					 Ibagué - Tolima </address>
 					<p>
-						<i class="icon-phone"></i> (38) 2615679 - (38) 2624427 <br> (+57) 3162401987<br>
+						<i class="icon-phone"></i> (38) 22325679 - (38) 262433427 <br> (+57) 3162487<br>
 						<i class="icon-envelope-alt"></i> email@domainname.com
 					</p>
 				</div>
