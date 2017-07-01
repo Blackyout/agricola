@@ -22,7 +22,7 @@
 <h3 align="center">DECLARACION SOPORTE DE CUENTA<br/><br />DOCUMENTO EQUIVALENTE No. {{ $dsc->id }} <br/>Pago No. 1</h3>
     <p><b>Contrato No.&nbsp;</b><u>{{ $dsc->Num_Cont }}</u><br><b>ACTIVIDAD:&nbsp;&nbsp;</b><u>{{ $dsc->Actividad }}</u><br><b>VALOR CONTRATO:&nbsp;</b><u>${{ number_format($dsc->val_contra)}}.oo</u></p> 
     <h4>EJECUCION DEL CONTRATO</h4>
-    <p align="justify"><i>Declaro bajo la gravedad del juramento que se han  efectuado los aportes a la seguridad social por los ingresos materiales de esta factura.  Dando cumplimiento  a  Ley 797 de 2003 El artículo 3° del artículo 15 de la Ley 100 de 1993 según  Min protección Social, Concepto 327934, 11/3/2010 .</i></p>
+    <p align="justify"><i>DSASDADASDAASD</i></p>
 
     <p><b>PARA  LO CUAL ANEXO:</b></p>
     <p>APORTES A LA SEGURIDAD SOCIAL:<span style = "margin: 1px; padding: 0 0 0 80px;">{{ $dsc->apor_se_soci }}</span></p>
@@ -36,7 +36,7 @@
     <h5>MIS  INGRESOS  ANUALES  SUPERAN  LAS 4.073 UVT ($109.323.393):</h5>
     <p style = "margin: 1px; padding: 0 0 0 400px;">{{ $dsc->ingre_anual }}</p>
     <img src="img/img.png" alt="">
-    <p>Se firma dando fe que lo antes escrito corresponde a la realidad tributaria del prestador del servicio. </p>
+    <p>ASDADAD </p>
     
 </body>
 </html>
